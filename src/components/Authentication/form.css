@@ -1,19 +1,21 @@
 .login-form {
-  margin: 2rem;
   padding: 5rem 0 2rem 0;
   height: 100vh;
-  background-color: rgb(31, 26, 48);
-  border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.login-form .link-to-home {
+  display: flex;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
 .login-form .login-form-p {
-  color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0rem 0 1rem 0;
-  color: rgb(226, 226, 226);
   text-align: center;
 }
 
@@ -31,15 +33,16 @@
 .login-form Form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  border: 2px solid rgba(114, 114, 114, 0.705);
-  padding: 0.5rem 2rem 0.5rem 4rem;
-  border-radius: 1rem;
+
+  border: 2px solid rgba(212, 212, 212, 0.705);
+  padding: 2rem;
+  border-radius: 2.5rem;
   margin: 0 0 2rem 0;
+  max-width: 90%;
 }
 .login-form Form p {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .login-form label {
@@ -49,15 +52,15 @@
 }
 
 .login-form input {
-  width: 60rem;
-  padding: 0.5rem;
+  width: 45rem;
+  max-width: 90%;
+  padding-left: 1rem;
   height: 4rem;
   outline: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin: 0rem;
   font-size: 1.8rem;
-  background-color: rgba(223, 223, 223, 0.055);
-  color: white;
+  background-color: #f5f5f5;
   border: none;
 }
 
@@ -68,20 +71,18 @@
 .submit-btn {
   padding: 1rem;
   margin: 2rem 0 3rem 0;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   width: 20rem;
-  border: 2px solid rgb(88, 88, 88);
-  background-color: rgba(255, 255, 255, 0);
-  color: #ac8403;
+  background-color: rgb(235, 235, 235);
+  color: black;
+  border: none;
   font-size: 2rem;
   font-weight: 600;
   font-family: "Roboto Mono", sans-serif;
   cursor: pointer;
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .submit-btn:hover {
-  color: black;
-  background-color: rgb(255, 255, 255);
-  transform: scale(1.05);
+  transform: none;
 }

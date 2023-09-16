@@ -1,0 +1,34 @@
+.errorAuthModal {
+  position: absolute;
+  top: 10%;
+  padding: 1.5rem;
+  background-color: rgb(255, 181, 181);
+  width: 60rem;
+  max-width: 90%;
+  border-radius: 1.5rem;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  animation: popupAnimation 0.2s;
+}
+
+.errorAuthModal,
+.isLogin {
+  background-color: rgb(154, 255, 154);
+}
+
+@keyframes popupAnimation {
+  from {
+    opacity: 0.5;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.errorAuthModal p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0.5rem;
+}

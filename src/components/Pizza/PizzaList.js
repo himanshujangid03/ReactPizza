@@ -3,10 +3,14 @@ import Pizza from "./Pizza";
 import Util from "./Util";
 import { API } from "../Context/api";
 import { useRouteLoaderData } from "react-router-dom";
+import FormModal from "../Authentication/FormModal";
+import Login from "../Authentication/Login";
+import SignUp from "../Authentication/SignUp";
 
 const PizzaList = (props) => {
   const pizzaData = useRouteLoaderData("pizza-loader");
   const [query, setQuery] = useState("");
+  
 
   const filteredPizzas = query
     ? pizzaData.filter((item) =>
@@ -19,10 +23,6 @@ const PizzaList = (props) => {
   return (
     <>
       <div className="container">
-        {/* <header className="header">
-          <h2 className="fast-pizza">Fast React Pizza Co.</h2>
-        </header> */}
-
         <main className="menu">
           <h2>Our menu</h2>
 

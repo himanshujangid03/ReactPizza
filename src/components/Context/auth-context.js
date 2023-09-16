@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { API, sortByPriceAPI, sortByRatingAPI } from "./api";
 
 const AuthContext = React.createContext({
   cartItem: Array,
   addToCartHandler: (item) => {},
   setCartItem: () => {},
-  setSortQuery: () => {},
-  sortQuery: API,
+  toggleModal: Boolean,
+  toggleModalHandler: () => {},
 });
 
 export const AuthContextProvider = (props) => {
   const [cartItem, setCartItem] = useState([]);
-  const [sortQuery, setSortQuery] = useState(API);
+  const [toggleModal, setToggleModal] = useState(false);
 
   const addToCartHandler = (item) => {
     const cartItemId = cartItem.some((el) => {
@@ -28,15 +27,19 @@ export const AuthContextProvider = (props) => {
     }
   };
 
+  const toggleModalHandler = () => {
+    setToggleModal((el) => !el);
+  };
+
   return (
     <>
       <AuthContext.Provider
         value={{
           addToCartHandler: addToCartHandler,
           cartItem: cartItem,
-          sortQuery: sortQuery,
-          setSortQuery: setSortQuery,
           setCartItem: setCartItem,
+          toggleModal: toggleModal,
+          toggleModalHandler: toggleModalHandler,
         }}
       >
         {props.children}
